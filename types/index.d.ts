@@ -211,9 +211,9 @@ declare module '@kalisio/feathers-distributed' {
     unuse: (...args: any[]) => any;
   }
 
-  export function initialize<A extends Application = Application>(app: DistributedApplication<A>): Promise<void>;
+  export function initialize<A extends Application = Application>(app: A): Promise<void>;
 
-  export function finalize<A extends Application = Application>(app: DistributedApplication<A>): Promise<void>;
+  export function finalize<A extends Application = Application>(app: A): Promise<void>;
 
   export default function init<A extends Application = Application>(options?: DistributedOptions<A>): (app: A) => void;
 }
